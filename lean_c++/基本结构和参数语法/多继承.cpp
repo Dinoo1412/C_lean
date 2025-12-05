@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//多继承
+//多继承 --子类继承多个父类
 
 class BaseA{
 public:
