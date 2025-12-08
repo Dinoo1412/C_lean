@@ -72,7 +72,7 @@ public:
 };
 
 int main(){
-    BaseA *a =new SonA();  //父类的指针可以指向子类的对象
+    BaseA *a =new SonA();  //父类的指针可以指向子类对象
     delete a;  //输出：BaseA析构函数被调用
     cout<<"-----------------"<<endl;
     BaseB *b =new SonB();  //父类的指针可以指
@@ -80,7 +80,7 @@ int main(){
     cout<<"-----------------"<<endl;
     BaseC *c =new SonC();   //虚析构函数不可以实例化对象，这相当于定义了一个指向对象的指针而已
     delete c;
-    //BaseC c1; //错误，纯虚析构函数不可以实例化对象
+    BaseC c1; //错误，纯虚析构函数不可以实例化对象
     return 0; //输出：SonC析构函数被调用  BaseC析构函数被调用
 
 }
