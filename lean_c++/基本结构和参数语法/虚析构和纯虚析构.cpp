@@ -75,7 +75,7 @@ int main(){
     BaseA *a =new SonA();  //父类的指针可以指向子类对象
     delete a;  //输出：BaseA析构函数被调用
     cout<<"-----------------"<<endl;
-    BaseB *b =new SonB();  //父类的指针可以指
+    BaseB *b =new SonB();  //父类的指针可以指向子类对象
     delete b;  //输出：SonB析构函数被调用  BaseB析构函数被调用
     cout<<"-----------------"<<endl;
     BaseC *c =new SonC();   //虚析构函数不可以实例化对象，这相当于定义了一个指向对象的指针而已
