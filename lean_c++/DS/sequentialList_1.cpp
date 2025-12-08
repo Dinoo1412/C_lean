@@ -35,15 +35,7 @@ void insertElement(SequentialList *list,int index,int element){
         for(int i=0;i<list->size;i++){
             newElements[i]=list->element[i];
         }
-        delete[] list->element;  
-        list->element = newElements;
-        list->capacity = newCapacity;
     }
-    for(int i = list->size; i > index; i--){
-        list->element[i] = list->element[i-1];
-    }
-    list->element[index] = element;
-    list->size++;
 }
 
 int getElement(SequentialList *list,int index){
@@ -55,7 +47,7 @@ int getElement(SequentialList *list,int index){
 
 int main(){
     int n;
-    while(cin >> n ){
+    while(cin >> n ){  //添加while循环可以处理多组输入，方便运行
         SequentialList list;
         initializeList(&list,n);
         for(int i=0;i<n;i++){
@@ -70,7 +62,7 @@ int main(){
                 prod *= val;
             }
         }
-        cout << "the final result : "<< prod << endl;
+        cout << prod << endl;
     }
 
     return 0;
