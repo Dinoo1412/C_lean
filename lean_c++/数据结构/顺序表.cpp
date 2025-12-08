@@ -91,5 +91,18 @@ void updateElement(SequentialList *list, int index,elementType element){
 }
 
 int main(){
+    SequentialList mylist;
+    initializeList(&mylist,5); //初始化顺序表，容量为5
+    insertElement(&mylist,0,10);
+    insertElement(&mylist,1,20);
+    insertElement(&mylist,1,15); //在索引1处插入15
+    cout<<"Element at index 0: "<<getElement(&mylist,0)<<endl; //输出索引0处的元素
+    cout<<"Element at index 1: "<<getElement(&mylist,1)<<endl; //输出索引1处的元素
+    cout<<"Element at index 2: "<<getElement(&mylist,2)<<endl; //输出索引2处的元素
+    cout<<"List size: "<<SequentialListSize(&mylist)<<endl; //输出顺序表的大小
+    deleteElement(&mylist,0);
+    cout<<"Element at index 0: "<<getElement(&mylist,0)<<endl; //输出索引0处的元素
+    cout<<"Element at index 1: "<<getElement(&mylist,1)<<endl; //输出索引1处的元素
+    cout<<"Element at index 2: "<<getElement(&mylist,2)<<endl; //输出索引2处的元素
     return 0;
 }
