@@ -56,6 +56,27 @@ int main(){
         if(n==0){
             break;
         }
+        SequentialList list;
+        initialize(&list,n);
+        for(int i= 0 ;i <n;i++){
+            double num;
+            cin >> num;
+            insertElement(&list,i,num);
+        }
+        int inegativeCount=0;
+        int izeroCount=0;
+        int ipostiveCount=0;
+        for(int i=0;i<list.size;i++){
+            double val = getElement(&list,i);
+            if(val < 0){
+                inegativeCount++;
+            }else if(val == 0){
+                izeroCount++;
+            }else{
+                ipostiveCount++;
+            }
+        }
+        cout << inegativeCount << " " << izeroCount << " " << ipostiveCount << endl;
     }
     return 0;
 }
